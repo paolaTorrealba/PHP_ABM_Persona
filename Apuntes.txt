@@ -1,0 +1,60 @@
+Bower --> el gestor de dependencias para el desarrollo web frontend.
+
+Se trata de un programa basado en NodeJS que se ejecuta desde la consola y que tiene un sencillo API de comandos útiles para realizar tareas de mantenimiento y administración de paquetes necesarios para construir un proyecto web, concretamente la parte del lado del cliente
+
+
+jQuery es un alibreria de javaScript
+
+Boostrap es un framework de diseño
+
+
+Bower esta creado con NodeJs, por lo que necesitamos instalarlo primero.
+
+=========================================================
+Algo mas sobre NPM/Bower/composer
+
+npm es el gestor de paquetes nodejs. Por lo tanto, se dirige a entornos de nodejs, lo que generalmente significa proyectos de nodejs del lado del servidor o proyectos de línea de comandos (Bower en sí es un paquete npm). Si va a hacer algo con nodejs, entonces usará npm.
+
+Bower es un gestor de paquetes que apunta a proyectos web (front-end). Necesita npm y nodejs para instalar bower y ejecutarlo, aunque los paquetes de bower no están diseñados específicamente para nodejs, sino para el entorno de "navegador".
+
+compositor es un administrador de dependencias que se enfoca en proyectos php. Si estás haciendo algo con Symfony (o php antiguo), este es probablemente el camino a seguir.
+
+=========================================================
+Instalando 
+
+1) instalar nodejs https://nodejs.org/en/
+2) Al instalar NodeJS se instala también un gestor de paquetes Javascript llamado “npm”. Este gestor sirve para descargar e instalar en nuestro sistema cualquier programa basado en NodeJS y se opera por línea de comandos
+3) tal vez sea necesario reiniciar la pc.
+4) npm install -g bower  --> para instalar Bower
+5) Archivo bower.json
+Lo ideal es que te crees un archivo bower.json en un carpeta raíz del proyecto. Este archivo te sirve para especificar de una manera formal todas las dependencias que tiene tu proyecto. 
+Para crearlo se puede usar 
+    bower init  
+en el directorio raiz del proyecto
+6) editamos el archivo bower.json agregando las dependencias que vamos a usar. Lo que hacemos es agregar un nuevo campo "dependencies" en el archivo:
+
+...
+ "ignore": ["**/.*", "node_modules", "bower_components", "test", "tests"],
+  "dependencies": {
+       "jquery": "~2.1.4",
+       "bootstrap": "~3.3.5" ,  
+       "angular": "1.4.7",
+       "angular-route": "1.4.7"
+  }
+...
+  
+}
+ 
+ NOTA: en cuanto a las versiones, algunas veces indicamos una versión exacta, pero a veces se le agrega el carácter “~”. Esto quiere decir que aceptamos que se actulice la version
+ 7) Ahora podemos instalar las dependencias que hemos declarado gracias al comando 
+    bower install
+	
+MAS INFO: https://desarrolloweb.com/articulos/uso-bower-gestor-dependencias.html
+
+	
+ =================================================================
+
+
+ CONEXION A LA BASE DE DATOS
+ ----------------------------
+ 
